@@ -1,0 +1,170 @@
+/* Color Variables for easy branding */
+:root {
+    --primary-navy: #003049;
+    --water-blue: #0077b6;
+    --ice-blue: #caf0f8;
+    --success-green: #25d366;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Soft light grey/blue background */
+    color: var(--primary-navy);
+    line-height: 1.6;
+}
+
+/* Header & Branding */
+header {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--water-blue) 100%);
+    color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 12px;
+    background: white;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 10px 0 5px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-weight: 300;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Order Section Card */
+.order-section {
+    background: var(--white);
+    max-width: 450px;
+    margin: -30px auto 30px; /* Pulls the card slightly into the header */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.order-section h2 {
+    text-align: center;
+    color: var(--water-blue);
+    margin-top: 0;
+}
+
+.order-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Important for width */
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--water-blue);
+    outline: none;
+}
+
+.total-display {
+    background: var(--ice-blue);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    margin-bottom: 10px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Order Button specific */
+.order-form button {
+    background-color: var(--water-blue);
+    color: white;
+}
+
+.order-form button:hover {
+    background-color: var(--primary-navy);
+}
+
+/* Location & Call Buttons */
+.info-section {
+    max-width: 450px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.info-section button {
+    background-color: var(--white);
+    color: var(--primary-navy);
+    border: 1px solid #ddd;
+}
+
+/* Floating WhatsApp Button */
+.float-chat {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--success-green);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.float-chat:hover {
+    transform: translateY(-5px);
+    background-color: #1ebe57;
+}
+
+/* Responsive design for phones */
+@media (max-width: 480px) {
+    .order-section {
+        width: 90%;
+        margin-top: 20px;
+    }
+}

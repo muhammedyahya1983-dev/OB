@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OB Water | Premium Pure Water</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="picture/Annotation 2026-04-09 142056.png" alt="OB Water Logo" class="logo">
+        <h1>OB Water Factory</h1>
+        <p>Pure. Refreshing. Quality You Can Trust.</p>
+    </header>
+
+    <section class="order-section">
+        <h2>Place Your Order</h2>
+        <div class="order-form">
+            <label><p>Price per bag: ₦<span id="price-display">400</span></p></label>
+            <div class="product-info">
+    
+    
+    <label for="quantity">Quantity (Bags):</label>
+    <input type="number" id="qty" value="1" placeholder="How many bags?" oninput="updateTotal()">
+    
+    
+</div>
+
+             <div class="total-display">
+               <p>Total: ₦<span id="total-price">400</span></p>
+            </div>
+<script>
+    // The corrected constant
+    const PRICE_PER_BAG = 400;
+
+    function updateTotal() {
+        const quantity = document.getElementById('qty').value;
+        const total = quantity * PRICE_PER_BAG;
+        document.getElementById('total-price').innerText = total;
+    }
+    
+</script>
+            <button><a href="https://wa.me/2348140097449" >Send Order via WhatsApp</a></button>
+        </div>
+        <script>
+            function sendOrderToWhatsApp() {
+    // 1. Get the data from your website
+    const totalPrice = document.getElementById('total-price').innerText;
+    const quantity = document.getElementById('quantity-input').value;
+    
+    // 2. Your WhatsApp phone number (no '+' or symbols)
+    const phoneNumber = "234XXXXXXXXXX"; 
+    
+    // 3. Create the message (using * for bold text in WhatsApp)
+    const message = `Hello! I'd like to order:\n\n` +
+                    `*Quantity:* ${quantity}\n` +
+                    `*Total Price:* ${totalPrice}\n\n` +
+                    `Please let me know the next steps.`;
+    
+    // 4. Encode and Open WhatsApp
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+}
+
+        </script>
+    </section>
+
+    <section class="info-section">
+        <button onclick="window.open('https://www.google.com/maps/search/?api=1&query=ap+bustop+beside+konle+fuelling+station+olugbode+itele+ota+ogun+state','_blank')">📍 Get Factory Location</button>
+        <button><a href='tel:+2348140097449'>📞 Call OB Water</a></button>
+    </section>
+
+    <!-- Replace '08056689061' in the link below later -->
+    <a href="https://wa.me/2348140097449" class="float-chat" target="_blank">
+        <span>Chat with OB Water</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
